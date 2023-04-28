@@ -1,0 +1,42 @@
+Pertemuan 6
+===========
+Image Matching
+
+- Scene Target
+mau cari target di sebuah Scene
+
+
+1. Feature
+2. Descripsi
+
+- koko krunch vs honey star
+Detector:
+
+- SIFT, AKAZE, ORB
+ - _create()
+ - kp, ds = detectAndCompute(obj|scn, None)
+
+ ubah jadi float32 si descriptor
+
+- K-dimensional tree:
+euclidean distance, 50 leave
+- FlannBasedMatcher(dict(algorithm = 1), dict(checks = 50))
+- BFMatcher(cv2.NORM_HAMMING, crossCheck = True)
+
+- flann.knnMatch(ds_obj, ds_scn, 2)
+- bfmatcher.match(ds_obj, ds_scn)
+ mau sorted supaya distancenya kecil
+
+- sorted(orb_match, key = lambda x : x.distance)
+
+- Masking : supaya ambil yg bener" sesuai & msh masuk itu merupakan image yg sama
+
+- def createMask(mask, match):
+ > fm, sm
+
+- buat match_mask jd 0,0
+- pake function createMask
+
+- drawMatchesKnn()
+- drawMatches, yg orb batesin 20, flags 2 (fm & sm ttp ada)
+

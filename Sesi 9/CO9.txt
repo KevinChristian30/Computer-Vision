@@ -1,0 +1,12 @@
+Pertemuan 9
+===========
+Image Retrieval
+
+misal ada gambar google image, dia nampilin image" yg sesuai/berhubungan 
+
+setiap gambar ngehasilin HE yg berbeda", misal kokokrunch klo diputer" bs aja kurang lbh mirip
+
+- Similarity Index
+
+
+- Result of Representation

@@ -1,0 +1,15 @@
+Pertemuan 1
+===========
+Basic Python
+-- Print
+-- Print phi = 3.1428
+-- List | Tuple a, b, c = | Set | Dictionary(.items())
+
+Basic Opencv | Basic Numpy
+- read, image.shape, show
+- image b, g, r
+- vstack, hstack
+- negative image
+- manual grayscale (uint8)
+
+https://uomustansiriyah.edu.iq/media/lectures/5/5_2017_03_26!05_41_09_PM.pdf

@@ -1,0 +1,37 @@
+Edge Detection
+==============
+Deteksi edge - perubahan intensitas yg cukup signifikan
+
+low intensity - high intensity
+
+cara kalkulasi ? paper Laplacian, Sobel, Canny
+
+- read, get shape heigth & width
+
+- Laplacian (CV_8U, CV_16S, CV_32F, CV_64F)
+
+- Sobel:
+> manual Sobel
+ calculateSobel(source, kernel, ksize):
+    flatten()
+ kernel_x
+ kernel_y
+
+> Sobel():
+ > sobel_x
+ > sobel_y
+
+- Merged Sobel:
+> Pythagoras (akar ((a^2) + (b^2)))
+>  *= 255/merged_sobel.max()
+
+- Manual merged sobel:
+> bitwise_or()
+> uint16()
+
+- Canny:
+> 50, 100
+> 50, 150
+> 75, 150
+> 75, 225
+

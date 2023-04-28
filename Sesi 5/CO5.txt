@@ -1,0 +1,45 @@
+Pertemuan 5
+===========
+Corner Detection
+
+- read
+- float32
+
+showResult(source, cmap) imshow, show
+
+> Harris
+ - cornerHarris() - bikin objek (igray, 2, 5, 0.04)
+ - wo subpix copy image
+ - without SubPix [harris_corner > 0.01 * harris_corner.max()] = merah
+
+-- Ada banyak pixel" yg dianggep sbg corner -> SubPix 
+
+> SubPix
+ - threshold(harris_corner, 0.01 * harris_corner.max(), 255, 0)
+ - uint8
+
+ - connectedComponentsWithStats(thresh)
+ - float32()
+
+ # kriteria kapan nnti loopingnya bakal kelar
+ - criteria = (cv2.TERM_CRITERIA_MAX_ITER + cv2.TERM_CRITERIA_EPS, 100, 0.0001)
+ - enhanced = cornerSubPix(igray, centroids, (2, 2), (-1, -1), criteria)
+ - np.uint16()
+ 
+ - with_subpix -> variable baru nampung image
+ - looping tiap index di cornernya warnain hijau
+
+> FAST
+ - read
+ - FastFeatureDetector_create(), ksh threshold
+
+ - fast.detect(fast_image, None)
+
+ - drawKeyPoints(image, kp, None, color=(255,0,0)) di gambar asli
+
+> ORB
+ - read
+ - ORB_create()
+ - orb.detect()
+ - drawKeyPoints()
+ 

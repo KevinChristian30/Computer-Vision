@@ -1,0 +1,63 @@
+Pertemuan 3
+============
+Image Processing
+----------------
+
+- read
+- get heigth, width
+
+grayscale : multiple n channel -> single channel
+> gray opencv
+> gray average
+> gray lightness
+    + b, g, r
+    + max channel
+    + min channel
+
+> gray luminosity
+> gray weighted average
+
+showResult(nrow, ncol, res_stack)
+=====================================
+
+threshold -> batas, untuk mempermudah mendapatkan feature" yg kita butuhkan
+> manual threshold (thresh = 100)
+    > threshhold = 255
+    <= 0
+
+thresh = 100, maxval = 255
+> thresh binary
+> thresh binary inverse
+> thresh mask
+> thresh otsu
+> thresh tozero
+> thresh tozero inverse
+> thresh triangle
+> thresh trunc
+
+==================================
+
+filtering : manipulasi matrix
+- mean filtering
+- median filtering
+tergantung dr jenis filter yg digunakan
+
+matrix komputasi berdasarkan kernel
+
+blurring -> menghilangkan noise / memperhalus
+
+> manual mean filter(source, ksize)
+> manual median filter
+1. split(image)
+ksize= 5
+2. apply function
+3. merge
+
+> blur - tuple
+> medianBlur - int
+> GaussianBlur - tuple, sigmaX = 2.0
+> bilateralFilter - 5, 150, 150
+
+
+
+https://uomustansiriyah.edu.iq/media/lectures/5/5_2017_03_26!05_41_09_PM.pdf

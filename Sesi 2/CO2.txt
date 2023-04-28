@@ -1,0 +1,26 @@
+Pertemuan 2
+===========
+Histogram Equalization | Basic matplotlib.pyplot
+
+- cvtColor -> gray
+- label, image, cmap
+- plt.figure()
+- plt.subplot()
+- plt.hist(img.flat, bins = 256, range = (0, 256))
+- plt.title()
+- plt.xlabel()
+- plt.ylabel()
+- plt.subplot()
+- plt.imshow()
+- plt.axis()
+- plt.show()
+
+- Normal Equalization (equalizeHist())
+- CLAHE (Contrast Limiting Adaptive Histogram Equalization)
+https://stackoverflow.com/questions/38504864/opencv-clahe-parameters-explanation
+
+- createCLAHE() 2.0 (8,8)
+- clahe.apply()
+
+Plotting histogram, gambarnya
+- enumerate() zip()

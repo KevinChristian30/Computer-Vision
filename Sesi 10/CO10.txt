@@ -1,0 +1,9 @@
+Pertemuan 10
+-------------
+> Deteksi muka orang
+
+> Face detection vs Face Recognition
+
+> Classifier Haarcascade 
+
+> LBPH

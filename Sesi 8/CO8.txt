@@ -1,0 +1,35 @@
+BOW - NLP
+bagi perkata" dr kalimat buaat nnti dikelompokin
+
+# TRAIN
+- ambil path & class
+- ambil descriptor pake sift
+- 0, vstack 1-abis, float32
+- kmeans(sds, 100, 1) ambil centroid
+
+- image_feature isi dgn 0 panjang image list x panjang centroid, float32
+- looping supaya bs vq
+ words, _ = vq(des_list[i], centroids)
+ - looping u/ tiap words
+  image_feature[i][w] += 1
+
+- StandardScaler().fit(image_features)
+- stdScaler.transform(image_features)
+
+- svm , svc, LinearSVC() - membagi penyebaran data
+- svc.fit(image_feature, np.array(image_classes_id))
+
+# TEST
+test_path = 'images/test'
+image_list = []
+
+for path in os.listdir(test_path):
+    image_list.append(f'{test_path}/{path}')
+
+copy dr atas, ubh jd test_features
+
+test_features = stdScaler.transform(test_features)
+result = svc.predict(test_features)
+
+for class_id, image_path in zip(result, image_list):
+    print(image_path, train_dir_list[class_id])
